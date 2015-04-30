@@ -1,0 +1,14 @@
+{
+    "name":        "VendorName/PackageName",
+    "description": "Travis test",
+    "homepage":    "http://www.netcommons.org/",
+    "license":     "NetCommons License",
+    "authors": [
+        {
+            "name":     "NetCommons Community"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap":         "~3.1"
+    }
+}
