@@ -3,7 +3,7 @@ language: php
 script:
   - echo `which jq`
   - jq --version
-  - composer install
+  - composer update
   - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev --dev
   - cat composer.json
 
