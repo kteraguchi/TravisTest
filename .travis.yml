@@ -14,5 +14,5 @@ script:
   - echo `which bower`
   - bower --version
   - bower install
-  - bower install `cat Plugin/bower.json | jq -c '.dependencies' | sed "s/[{\"\'}]//g" | sed "s/,/ /g" | sed "s/:/#/g" --save
+  - bower install `cat Plugin/bower.json | jq -c '.dependencies' | sed "s/[{\"\'}]//g" | sed "s/,/ /g" | sed "s/:/#/g"` --save
   - cat bower.json
