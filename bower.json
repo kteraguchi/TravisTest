@@ -1,0 +1,15 @@
+{
+  "name": "PackageName",
+  "version": "3.0.0",
+  "homepage": "http://www.netcommons.org/",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "NetCommons Community"
+  ],
+  "license": "NetCommons License",
+  "dependencies": {
+    "bootstrap": "~3.1"
+  }
+}

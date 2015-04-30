@@ -1,14 +1,18 @@
 language: php
 
 script:
-#  - echo `which jq`
-#  - jq --version
-#  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev --dev
-
-#  - npm install -g bower
-#  - echo `which bower`
-#  - bower --version
-#  - bower install
+  - echo `which jq`
+  - jq --version
+  - composer install
+  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev --dev
+  - cat composer.json
 
   - echo `which sed`
   - sed --version
+
+  - npm install -g bower
+  - echo `which bower`
+  - bower --version
+  - bower install
+  - bower install `cat Plugin/bower.json | jq -c '.dependencies' | sed "s/[{\"\'}]//g" | sed "s/,/ /g" | sed "s/:/#/g" --save
+  - cat bower.json
