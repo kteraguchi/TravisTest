@@ -2,3 +2,4 @@ language: php
 
 script:
   - echo `which jq`
+  - jq --version
