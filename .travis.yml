@@ -1,6 +1,11 @@
 language: php
 
 script:
-  - echo `which jq`
-  - jq --version
-  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev --dev
+#  - echo `which jq`
+#  - jq --version
+#  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev --dev
+
+  - echo `which bower`
+  - bower --version
+#  - npm install -g bower
+#  - bower install
