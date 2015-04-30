@@ -5,7 +5,7 @@ script:
 #  - jq --version
 #  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev --dev
 
+  - npm install -g bower
   - echo `which bower`
   - bower --version
-#  - npm install -g bower
 #  - bower install
