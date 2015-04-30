@@ -3,4 +3,4 @@ language: php
 script:
   - echo `which jq`
   - jq --version
-  - composer require `cat ./Plugin/composer.json | jq '.name'`
+  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev
