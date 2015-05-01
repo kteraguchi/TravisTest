@@ -1,10 +1,13 @@
-language: php
+notifications:
+  email: false
+
+  language: php
 
 script:
   - echo `which jq`
   - jq --version
   - composer update
-  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev --dev
+  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev
   - cat composer.json
 
   - echo `which sed`
