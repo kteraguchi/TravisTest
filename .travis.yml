@@ -4,18 +4,21 @@ notifications:
 language: php
 
 script:
-  - echo `which jq`
-  - jq --version
-  - composer update
-  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev
-  - cat composer.json
+  - echo `which svn`
+  - svn --version
 
-  - echo `which sed`
-  - sed --version
+#  - echo `which jq`
+#  - jq --version
+#  - composer update
+#  - composer require `cat ./Plugin/composer.json | jq -r '.name'`:@dev
+#  - cat composer.json
 
-  - npm install -g bower
-  - echo `which bower`
-  - bower --version
-  - bower install
-  - bower install `cat Plugin/bower.json | jq -c '.dependencies' | sed "s/[{\"\'}]//g" | sed "s/,/ /g" | sed "s/:/#/g"` --save
-  - cat bower.json
+#  - echo `which sed`
+#  - sed --version
+
+#  - npm install -g bower
+#  - echo `which bower`
+#  - bower --version
+#  - bower install
+#  - bower install `cat Plugin/bower.json | jq -c '.dependencies' | sed "s/[{\"\'}]//g" | sed "s/,/ /g" | sed "s/:/#/g"` --save
+#  - cat bower.json
